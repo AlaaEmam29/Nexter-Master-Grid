@@ -1,0 +1,33 @@
+.footer {
+    background-color: $color-secondary;
+    grid-column: full-start / full-end;
+    padding: 8rem;
+
+
+    &__list {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+        grid-gap: 2rem;
+        align-items: center;
+    }
+
+
+    &__link:link,
+    &__link:visited {
+        font-size: 1.5rem;
+        letter-spacing: 0.2rem;
+        text-transform: uppercase;
+        background-color: transparent;
+        text-align: center;
+        padding: 1.5rem 2rem;
+        display: block;
+        transition: all 0.2s;
+
+        &:hover,
+        &:active {
+            background-color: rgba(255, 255, 255, 0.05);
+            transform: translateY(-3px);
+        }
+    }
+}

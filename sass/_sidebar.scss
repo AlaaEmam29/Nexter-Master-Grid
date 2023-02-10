@@ -1,0 +1,53 @@
+.sidebar {
+    background-color: $color-primary;
+    grid-column: sidebar-start / sidebar-end;
+    grid-row: 1 / -1;
+
+    @media only screen and (max-width: $bp-large) {
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+        z-index: 3;
+
+        align-items: center;
+        align-self: flex-start;
+
+
+    }
+
+    @media only screen and (max-width : $bp-medium) {
+        align-self: stretch;
+
+
+    }
+
+
+    &__icon {
+        fill: #fff;
+        transition: all 0.2s;
+        cursor: pointer;
+        width: 100%;
+
+
+        @media only screen and (max-width: $bp-large) {
+            height: 5rem;
+            width: 5rem;
+            display: block;
+            object-fit: cover;
+
+        }
+
+    }
+
+    &:hover &__icon {
+
+        transform: translateY(-4px);
+
+        filter: brightness(90%);
+
+        @media only screen and (max-width: $bp-large) {
+            transform: translateY(-2px);
+
+        }
+    }
+
+}
